@@ -1,3 +1,4 @@
 let server = require('./server.js');
 let router = require('./router');
-server.start(router.route);
+let requestHandler =require('./requestHandler');
+server.start(router.route, requestHandler.handle);
